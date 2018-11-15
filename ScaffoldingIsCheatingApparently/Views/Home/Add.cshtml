@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+<body>
+    <form name="addItem" method="post" action="/Home/AddItem">
+        <label class="control-label">
+            Name: 
+            <input type="text" name="Name" />
+        </label><br />
+        <label class="control-label">
+            Description:
+            <input type="text" name="Description" />
+        </label><br />
+        <label class="control-label">
+            Quantity:
+            <input type="number" name="Quantity" />
+        </label><br />
+        <label class="control-label">
+            Price:
+            <input type="text" name="Price" />
+            <!--needs validation-->
+        </label><br />
+
+        <input type="submit" value="Confirm" class="btn-default" />
+        <a href="~/Views/Home/List.cshtml">Cancel and return to list</a>
+    </form>
+</body>

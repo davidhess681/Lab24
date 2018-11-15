@@ -1,0 +1,31 @@
+﻿@model ScaffoldingIsCheatingApparently.Models.Item
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<body>
+    <form name="editItem" method="post" action="/Home/SaveChanges">
+        <label class="control-label">
+            Name: @Html.DisplayFor(model => model.Name)
+            <input type="hidden" name="Name" value="@Html.DisplayFor(model => model.Name)" />
+        </label><br />
+        <label class="control-label">
+            Description:
+            <input type="text" name="Description" value="@Html.DisplayFor(model => model.Description)" />
+        </label><br />
+        <label class="control-label">
+            Quantity:
+            <input type="number" name="Quantity" value="@Html.DisplayFor(model => model.Quantity)" />
+        </label><br />
+        <label class="control-label">
+            Price:
+            <input type="text" name="Price" value="@Html.DisplayFor(model => model.Price)" />
+        </label><br />
+
+        <input type="submit" value="Confirm" class="btn-default"/>
+        <a href="~/Views/Home/List.cshtml">Cancel and return to list</a>
+    </form>
+</body>
+
